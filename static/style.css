@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #4c5061;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Autocomplete box */
+.autocomplete-container {
+    margin-top: 80px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+/* Gradient border animation */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.autocomplete-container::after,
+.autocomplete-container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.autocomplete-container::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from { --angle: 0deg; }
+    to   { --angle: 360deg; }
+}
+
+/* Input */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Suggestions */
+.suggestions {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #eee;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #4c5061;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Autocomplete box */
+.autocomplete-container {
+    margin-top: 80px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+/* Gradient border animation */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.autocomplete-container::after,
+.autocomplete-container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.autocomplete-container::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from { --angle: 0deg; }
+    to   { --angle: 360deg; }
+}
+
+/* Input */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Suggestions */
+.suggestions {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #eee;
+}
+
+/* 📱 Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+    body {
+        align-items: center;
+        padding: 20px;
+    }
+    .autocomplete-container {
+        margin-top: 40px;
+        padding: 15px;
+        width: 100%;
+    }
+    input[type="text"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* 📱📲 Tablets (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .autocomplete-container {
+        margin-top: 60px;
+        padding: 20px;
+        max-width: 700px;
+        width: 95%;
+    }
+    input[type="text"] {
+        font-size: 15px;
+    }
+}
+
+/* 💻 Large screens (above 1024px) */
+@media (min-width: 1025px) {
+    .autocomplete-container {
+        margin-top: 100px;
+        max-width: 600px;
+    }
+}

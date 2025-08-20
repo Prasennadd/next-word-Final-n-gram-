@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>N-gram Next Word Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="autocomplete-container">
+        <h2>Type something...</h2>
+        <input type="text" id="inputBox" placeholder="Start typing...">
+        <div class="suggestions" id="suggestions"></div>
+    </div>
+</body>
+</html>
