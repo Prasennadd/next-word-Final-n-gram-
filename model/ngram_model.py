@@ -5,6 +5,8 @@ from collections import defaultdict
 def tokenize(text):
     return text.lower().split()
 
+
+# -----backbone
 def build_ngram_model(tokens, n=3):
     model = defaultdict(list)
     for i in range(len(tokens) - n + 1):
