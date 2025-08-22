@@ -140,6 +140,13 @@ body {
     to   { --angle: 360deg; }
 }
 
+.autocomplete-container.hide-animation::before,
+.autocomplete-container.hide-animation::after {
+    opacity: 0 !important;
+}
+
+
+
 /* Input */
 input[type="text"] {
     width: 100%;

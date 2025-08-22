@@ -1,3 +1,11 @@
+
+const k = document.getElementById('M');
+k.addEventListener('click', () => {
+    // k.style.border="solid 3px black";
+    // k.style.borderRadius="10px";
+    k.classList.add('hide-animation');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const inputBox = document.getElementById('inputBox');
     const suggestionsDiv = document.getElementById('suggestions');
